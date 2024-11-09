@@ -1,4 +1,4 @@
-package com.jfb.api.dto;
+package com.jfb.car.dtos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
