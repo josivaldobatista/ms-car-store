@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/car")
+@RequestMapping("/api/cars")
 public class CarPostController {
 
     @Autowired
@@ -40,6 +40,6 @@ public class CarPostController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCarForSale(@PathVariable("id") String id) {
         carPostStoreService.removeCarForSale(id);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 }
