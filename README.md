@@ -1,4 +1,4 @@
-# Arquiteturas de Microserviços com Java, Spring Boot e Apache Kafka (ATUALIZANDO)
+# Arquiteturas de Microserviços com Java, Spring Boot e Apache Kafka
 
 ## Descrição
 
