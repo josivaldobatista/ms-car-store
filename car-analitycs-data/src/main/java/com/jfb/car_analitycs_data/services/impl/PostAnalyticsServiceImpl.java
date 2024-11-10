@@ -30,7 +30,9 @@ public class PostAnalyticsServiceImpl implements PostAnalyticsService {
 
     @Override
     public void saveDataAnalytics(CarPostDTO carPostDTO) {
-
+        saveBrandAnalytics(carPostDTO.brand());
+        saveCarModelAnalytics(carPostDTO.model());
+        saveCarModelPriceAnalytics(carPostDTO.model(), carPostDTO.price());
     }
 
     private void saveBrandAnalytics(String brand) {
@@ -45,7 +47,7 @@ public class PostAnalyticsServiceImpl implements PostAnalyticsService {
         });
     }
 
-    private void saveCarAnalytics(String carModel) {
+    private void saveCarModelAnalytics(String carModel) {
         carModelAnalyticsRepository.findByModel(carModel).ifPresentOrElse(item -> {
             item.setPosts(item.getPosts() + 1);
             carModelAnalyticsRepository.save(item);
