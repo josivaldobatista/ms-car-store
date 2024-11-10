@@ -3,6 +3,8 @@ package com.jfb.api.controllers;
 import com.jfb.api.dto.CarPostDTO;
 import com.jfb.api.messages.KafkaProducerMessage;
 import com.jfb.api.services.CarPostStoreService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,8 @@ import java.util.List;
 @RequestMapping("/api/cars")
 public class CarPostController {
 
+    private final Logger LOG = LoggerFactory.getLogger(CarPostController.class);
+
     @Autowired
     private CarPostStoreService carPostStoreService;
 
@@ -22,6 +26,7 @@ public class CarPostController {
 
     @PostMapping("/publish")
     public ResponseEntity<Void> postCarForSale(@RequestBody CarPostDTO carPostDTO) {
+        LOG.info("USANDO EVENTOS/MENSAGENS KAFKA - producer Car Post information: {}", carPostDTO);
         kafkaProducerMessage.sendMessage(carPostDTO);
         return ResponseEntity.ok().build();
     }

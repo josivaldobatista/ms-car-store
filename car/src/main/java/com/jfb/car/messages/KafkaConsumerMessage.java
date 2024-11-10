@@ -18,7 +18,7 @@ public class KafkaConsumerMessage {
 
     @KafkaListener(topics = "${kafka.listener.topic}", groupId = "${kafka.listener.group-id}")
     public void listening(CarPostDTO carPostDTO) {
-        LOG.info("Received Car Post information: {}", CarPostDTO.class);
+        LOG.info("CAR STORE - Received Car Post information: {}", CarPostDTO.class);
         carPostService.newPostDetails(carPostDTO);
     }
 }

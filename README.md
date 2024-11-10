@@ -1,4 +1,4 @@
-# Arquiteturas de Microserviços com Java, Spring Boot e Apache Kafka
+# Arquiteturas de Microserviços com Java, Spring Boot e Apache Kafka (EM PROGRESSO)
 
 ## Descrição
 
@@ -38,6 +38,26 @@ Arquiteturas de microserviços são amplamente adotadas por diversos projetos ao
 ## Projetos Práticos
 
 Ao longo do desenvolvimento, foram implementados projetos práticos que abordam a aplicação dos conceitos discutidos. Esses projetos servem como exemplo de como aplicar a comunicação híbrida entre microserviços usando Java, Spring Boot, e Apache Kafka.
+
+## Requisitos para Execução
+
+Para rodar este projeto, você precisará das seguintes ferramentas:
+
+### **Docker**
+- **Descrição:** Docker é utilizado para containerizar as aplicações, garantindo consistência no ambiente de desenvolvimento e produção.
+- **Instalação:** Siga as instruções no site oficial do Docker: [Docker Installation](https://docs.docker.com/get-docker/)
+
+### **Apache Kafka**
+- **Descrição:** Apache Kafka é utilizado como broker de mensagens para permitir a comunicação entre microserviços.
+- **Utilização:** Foi utilizado o Conduktor para facilitar a gestão do Kafka.
+- **Instalação:** Siga as instruções no site oficial do Conduktor: [Conduktor Installation](https://www.conduktor.io/)
+
+### **PostgreSQL**
+- **Descrição:** PostgreSQL é utilizado como banco de dados para armazenar as informações dos microserviços.
+- **Instalação:** Siga as instruções no site oficial do PostgreSQL: [PostgreSQL Installation](https://www.postgresql.org/download/)
+
+### **Configurações Adicionais**
+Certifique-se de que os serviços Docker, Kafka, e PostgreSQL estão em execução e corretamente configurados antes de iniciar o projeto.
 
 ## Conclusão
 

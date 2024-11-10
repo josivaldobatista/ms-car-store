@@ -2,7 +2,6 @@ package com.jfb.car.services.impl;
 
 import com.jfb.car.dtos.CarPostDTO;
 import com.jfb.car.entities.CarPost;
-import com.jfb.car.entities.OwnerPost;
 import com.jfb.car.mappers.CarMapper;
 import com.jfb.car.repositories.CarPostRepository;
 import com.jfb.car.repositories.OwnerPostRepository;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @Service
 public class CarPostServiceImpl implements CarPostService {
@@ -45,6 +43,7 @@ public class CarPostServiceImpl implements CarPostService {
     @Override
     public List<CarPostDTO> getCarSales() {
         List<CarPostDTO> listCarsSales = new ArrayList<>();
+        var teste = carPostRepository.findAll();
         carPostRepository.findAll().forEach(item -> {
             listCarsSales.add(carMapper.toDto(item));
         });
