@@ -17,6 +17,9 @@ public class CarMapper {
                 .createDate(carPost.getCreateDate())
                 .ownerName(carPost.getOwnerPost().getName())
                 .price(carPost.getPrice())
+                .contact(carPost.getContact())
+                .ownerType(carPost.getOwnerPost().getType())
+                .ownerId(carPost.getOwnerPost().getId())
                 .build();
     }
 

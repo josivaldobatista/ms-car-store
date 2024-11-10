@@ -23,6 +23,7 @@ public class OwnerPostController {
     @PostMapping("/owner")
     public ResponseEntity<Void> createOwnerCar(@RequestBody OwnerPostDTO ownerPostDTO) {
         LOG.info("Creating a new OwnerPost: {}", OwnerPostDTO.class);
+        LOG.info("USANDO API REST - Criando novo usuário: {}", ownerPostDTO);
         ownerPostService.createOwnerCar(ownerPostDTO);
         return ResponseEntity.ok().build();
     }
